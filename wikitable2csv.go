@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"regexp"
 	"strconv"
 	"strings"
 
@@ -122,6 +123,8 @@ func main() {
 
 	fmt.Printf("parsed %d tables\n", len(parsed))
 
+	cleanedTitle := regexp.MustCompile(`[^a-zA-Z0-9_-]+`).ReplaceAllString(title, "")
+
 	for i, t := range parsed {
 		humanIndex := i + 1
 
@@ -141,7 +144,7 @@ func main() {
 			continue
 		}
 
-		fName := fmt.Sprintf("%s-%d.csv", title, humanIndex)
+		fName := fmt.Sprintf("%s-%d.csv", cleanedTitle, humanIndex)
 
 		if !*silent {
 			fmt.Printf("writing table %d to %s\n", humanIndex, fName)
