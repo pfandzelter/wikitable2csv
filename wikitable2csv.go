@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/pfandzelter/wikitable2csv-cli/pkg/wiki"
+	"github.com/pfandzelter/wikitable2csv/pkg/wiki"
 )
 
 // update this version when making changes by tagging the commit

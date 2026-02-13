@@ -1,13 +1,11 @@
-# wikitable2csv-cli
+# wikitable2csv CLI
 
 A CLI tool to extract tables from Wiki pages and convert them to CSV.
 This tool is a fork of [`gambolputty/wikitable2csv`](https://github.com/gambolputty/wikitable2csv), rewritten in Go. Most of the source logic has been converted verbatim, frontend code has been removed, CLI code has been added.
 
-A web tool to extract tables from Wiki pages and convert them to CSV. Use it online [here](https://wikitable2csv.ggor.de/).
-
 ## Install
 
-Install with go (>=1.22) installed: `go install github.com/pfandzelter/wikitable2csv-cli@latest`
+Install with go (>=1.22) installed: `go install github.com/pfandzelter/wikitable2csv@latest`
 
 Alternatively, you may download the binary for your platform from the release page.
 
